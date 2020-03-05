@@ -1,13 +1,24 @@
 # Thread Scheduling Simulation
 
+Programming exercise in the course of the lecture _Basic Principles: Operating Systems and System Software_ (IN0009) at the Technical University of Munich.\
+
 Syntax: `threadsched -n <N Threads> -t <time step> -q <time quantum> -a <algorithm>`  
 
-_N Threads_ defines how many threads will be run in the simulation\
-_time step_ step defines ...\
-_time quantum_ defines the time steps in which a clock is counted up (starting with 0).\
-_algorithm_ defines the scheduling algorithm used to handle the threads
-  - _RR_ = Round Robin
-  - _PRR_ = Priority Round Robin
+<N Threads>:    defines how many threads will be run in the simulation\
+<time step>:    defines ...\
+<time quantum>: defines the time steps in which a clock is counted up (starting with 0).\
+<algorithm>:    defines the scheduling algorithm used to handle the threads
+
+Supported algorithms are:\
+**Round Robin (RR)**\
+This algorithm ignores the priorities and executes the threads available at any given time one by one, each for the corresponding time quantum. When a new thread is started, it is added to the end of the current list
+of calculation-ready threads.\
+
+**Priority Round Robin (PRR)**\
+This algorithm is designed to take priorities into account and strictly execute the higher priority threads before the lower priority threads. Round robin scheduling is used within a priority.\
+
+**Shortest Remaining Time Next (SRTN)**
+This algorithm prioritizes the threads according to their remaining runtime, with the one with the shortest remaining runtime receiving the CPU first. The system works preemptively: if a new thread is added that has a shorter remaining runtime, the thread currently running is interrupted and the new one is executed; that is, if the remaining runtime is the same, the active thread continues running.\
 
 
 ## Example outputs
