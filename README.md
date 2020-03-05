@@ -1,10 +1,13 @@
-# Thread Scheduling
+# Thread Scheduling Simulation
 
 Syntax: `threadsched -n <N Threads> -t <time step> -q <time quantum> -a <algorithm>`  
 
-The number of threads defines how many threads will be run in the simulation\
-The time step defines ...\
-The time quantum defines the time steps in which a clock is counted up (starting with 0).\
+_N Threads_ defines how many threads will be run in the simulation\
+_time step_ step defines ...\
+_time quantum_ defines the time steps in which a clock is counted up (starting with 0).\
+_algorithm_ defines the scheduling algorithm used to handle the threads
+  - _RR_ = Round Robin
+  - _PRR_ = Priority Round Robin
 
 
 ## Example outputs
@@ -87,4 +90,100 @@ $ ./threadsched −n 3 −t 10 −q 50 −a RR
 000670 |     3
 000680 |     3
 000690 |     3
+```
+
+```
+$ ./threadsched −n 4 −t 10 −q 50 −a PRR
+1 50 200
+1 100 200
+2 150 200
+1 200 200
+
+Time | 1 2 3 4 5 6 7 8 9 10
+−−−−−−−+−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
+000000 |
+000010 |
+000020 |
+000030 |
+000040 |
+000050 | 1
+000060 | 1
+000070 | 1
+000080 | 1
+000090 | 1
+000100 |   2
+000110 |   2
+000120 |   2
+000130 |   2
+000140 |   2
+000150 | 1
+000160 | 1
+000170 | 1
+000180 | 1
+000190 | 1
+000200 |   2
+000210 |   2
+000220 |   2
+000230 |   2
+000240 |   2
+000250 |       4
+000260 |       4
+000270 |       4
+000280 |       4
+000290 |       4
+000300 | 1
+000310 | 1
+000320 | 1
+000330 | 1
+000340 | 1
+000350 |   2
+000360 |   2
+000370 |   2
+000380 |   2
+000390 |   2
+000400 |       4
+000410 |       4
+000420 |       4
+000430 |       4
+000440 |       4
+000450 | 1
+000460 | 1
+000470 | 1
+000480 | 1
+000490 | 1
+000500 |   2
+000510 |   2
+000520 |   2
+000530 |   2
+000540 |   2
+000550 |       4
+000560 |       4
+000570 |       4
+000580 |       4
+000590 |       4
+000600 |       4
+000610 |       4
+000620 |       4
+000630 |       4
+000640 |       4
+000650 |     3
+000660 |     3
+000670 |     3
+000680 |     3
+000690 |     3
+000700 |     3
+000710 |     3
+000720 |     3
+000730 |     3
+000740 |     3
+000750 |     3
+000760 |     3
+000770 |     3
+000780 |     3
+000790 |     3
+000800 |     3
+000810 |     3
+000820 |     3
+000830 |     3
+000840 |     3
 ```
