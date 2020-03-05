@@ -9,7 +9,6 @@ Syntax: `threadsched -n <N Threads> -t <time step> -q <time quantum> -a <algorit
 \<time quantum>: defines the time steps in which a clock is counted up (starting with 0).\
 \<algorithm>:    defines the scheduling algorithm used to handle the threads
 
-Supported algorithms are:\
 **Round Robin (RR)**\
 This algorithm ignores the priorities and executes the threads available at any given time one by one, each for the corresponding time quantum. When a new thread is started, it is added to the end of the current list
 of calculation-ready threads.
