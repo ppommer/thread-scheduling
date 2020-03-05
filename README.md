@@ -27,7 +27,7 @@ Priority StartTime RunTime<newline>
 Priority StartTime RunTime<newline>
 ```
 
-## Example outputs
+## Example I/O
 
 ```
 $ ./threadsched −n 3 −t 10 −q 50 −a RR
