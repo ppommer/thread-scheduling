@@ -1,6 +1,6 @@
 # Thread Scheduling Simulation
 
-Programming exercise in the course of the lecture _Operating Systems and System Software_ (IN0009) at the Technical University of Munich.
+Simulation of thread scheduling algorithms for personal training purposes.
 
 Syntax: `threadsched -n <N Threads> -t <time step> -q <time quantum> -a <algorithm>`  
 
