@@ -4,10 +4,10 @@ Simulation of thread scheduling algorithms for personal training purposes.
 
 Syntax: `threadsched -n <N Threads> -t <time step> -q <time quantum> -a <algorithm>`  
 
-`\<N Threads>` defines how many threads will be run in the simulation (≤ 10)\
-`\<time step>` defines the duration of one time step\
-`\<time quantum>` defines the minimum running time for each thread\
-`\<algorithm>` defines the scheduling algorithm used to handle the threads
+`<N Threads>` defines how many threads will be run in the simulation (≤ 10)\
+`<time step>` defines the duration of one time step\
+`<time quantum>` defines the minimum running time for each thread\
+`<algorithm>` defines the scheduling algorithm used to handle the threads
 
 **Round Robin (RR)**\
 This algorithm ignores the priorities and executes the threads available at any given time one by one, each for the corresponding time quantum. When a new thread is started, it is added to the end of the current list
